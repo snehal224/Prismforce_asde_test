@@ -31,13 +31,8 @@ Special consideration is given to the enemies in circles 3 and 7, who can regene
 2. **Recursive Decisions:** The algorithm recursively checks the possibility of recharging, skipping, or battling at each circle.
 3. **Handling Behind Attacks:** The algorithm tracks and manages attacks from enemies 3 and 7 when they regenerate and attack from behind.
 
-## Time Complexity
-
-The time complexity of the algorithm is exponential, O(3^n), where `n` is the number of circles (or enemies). This is because, at each circle, Abhimanyu has up to three choices: recharge, skip, or battle. In the worst-case scenario, all paths need to be explored due to the recursive nature of the algorithm.
-
 ### Optimizations:
 - **Memoization:** To improve efficiency, memoization can be employed to store the results of already evaluated states (combinations of current power, skips left, and recharges left).
-- **Pruning:** Some branches of recursion can be pruned if it's clear that they will not lead to a successful outcome.
 
 ## Test Cases
 
